@@ -50,12 +50,31 @@
       id="toggle-inventory">
       Show Inventory
     </button>
+    <button
+      style="
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 8px;
+        opacity: 20%;
+      "
+      id="reload">
+      Reload
+    </button>
 
     <script>
       // Add this JavaScript code at the end of your existing script
       document.addEventListener("DOMContentLoaded", function () {
         const toggleButton = document.getElementById("toggle-inventory");
+        const reloadButton = document.getElementById("reload");
         const inventoryDisplay = document.getElementById("inventory-display");
+
+        reloadButton.addEventListener("click", function () {
+          window.location.reload();
+        });
 
         // Set initial state (optional)
         let isVisible = true;

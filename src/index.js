@@ -5,8 +5,7 @@ const originalSectors = [
     color: "#ffda85",
     text: "#333333",
     label: "T-shirt",
-    image:
-      "https://res.cloudinary.com/dicewvvjl/image/upload/v1736941846/fkh5dhczev88rbypmm7k.png",
+    image: "./tshirt.png",
   },
   {
     color: "#FFF",

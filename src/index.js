@@ -5,7 +5,7 @@ const originalSectors = [
     color: "#ffda85",
     text: "#333333",
     label: "T-shirt",
-    image: "./tshirt.png",
+    image: "/tshirt.png",
   },
   {
     color: "#FFF",

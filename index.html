@@ -1,0 +1,83 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPIN WHEEL - VIVA</title>
+    <meta charset="UTF-8" />
+    <script defer src="renderer.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body id="body">
+    <div class="game" id="game">
+      <img
+        src="https://res.cloudinary.com/dicewvvjl/image/upload/v1736947752/xnoshky2oi4zapalmnwl.png"
+        alt="logo"
+        class="logo" />
+      <div id="spin_the_wheel">
+        <canvas id="wheel" width="800" height="800"> </canvas>
+        <div id="spin"></div>
+      </div>
+
+      <div id="results-wrapper">
+        <div id="result-container">
+          <h1 id="result-text1" class="result-text">
+            <span id="congrats" class="congrats">Congratulations</span>
+            <span id="result-text">You have won a</span>
+          </h1>
+          <span id="result" class="result"></span>
+        </div>
+      </div>
+    </div>
+    <div id="inventory-display" class="inventory-container">
+      <!-- <button id="reset-inventory" class="reset-button">Reset Inventory</button> -->
+    </div>
+    <button
+      style="
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+        margin-right: 20px;
+        padding: 8px;
+        opacity: 20%;
+      "
+      id="toggle-inventory">
+      Show Inventory
+    </button>
+
+    <script>
+      // Add this JavaScript code at the end of your existing script
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("toggle-inventory");
+        const inventoryDisplay = document.getElementById("inventory-display");
+
+        // Set initial state (optional)
+        let isVisible = true;
+
+        toggleButton.addEventListener("click", function () {
+          isVisible = !isVisible;
+
+          if (isVisible) {
+            inventoryDisplay.style.display = "none";
+            // Optional: Change button text
+            toggleButton.textContent = "Show Inventory";
+            toggleButton.style.opacity = "20%";
+          } else {
+            inventoryDisplay.style.display = "block";
+            // Optional: Change button text
+            toggleButton.textContent = "Hide Inventory";
+            toggleButton.style.opacity = "100%";
+          }
+        });
+      });
+    </script>
+
+    <script defer src="src/index.js"></script>
+  </body>
+</html>

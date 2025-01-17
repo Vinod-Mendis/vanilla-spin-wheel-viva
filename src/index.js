@@ -176,7 +176,7 @@ function resetInventory() {
 const rand = (m, M) => Math.random() * (M - m) + m;
 const tot = sectors.length;
 const spinEl = document.querySelector("#spin");
-const bodyEl = document.querySelector("#game");
+const bodyEl = document.querySelector("#logo");
 const resultsWrapperEl = document.querySelector("#results-wrapper");
 const resultEl = document.querySelector("#result");
 const resultTextEl = document.querySelector("#result-text");
